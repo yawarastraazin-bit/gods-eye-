@@ -1,21 +1,17 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.godseye.app">
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 
-    <application
-        android:label="God's Eye">
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
-    </application>
-
-</manifest>
+rootProject.name = "GodsEye"
+include(":app")
