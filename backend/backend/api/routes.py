@@ -48,4 +48,22 @@ def clear_memories():
     memory.clear()
     return {
         "message": "All memories deleted"
+        
+    }
+
+@router.get("/chat")
+def chat(message: str):
+    text = message.lower()
+
+    if "hello" in text:
+        reply = "Hello. I am God's Eye."
+    elif "who are you" in text:
+        reply = "I am God's Eye, your personal assistant."
+    elif "memory" in text:
+        reply = f"I currently have {len(memory)} memories."
+    else:
+        reply = f"You said: {message}"
+
+    return {
+        "reply": reply
     }
