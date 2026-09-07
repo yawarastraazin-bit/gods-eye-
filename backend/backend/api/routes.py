@@ -14,3 +14,12 @@ def chat(message: str):
     return {
         "reply": f"You said: {message}"
     }
+
+memory = []
+@router.post("/remember")
+def remember(note: str):
+    memory.append(note)
+    return {
+        "saved": note,
+        "total_memories": len(memory)
+    }
