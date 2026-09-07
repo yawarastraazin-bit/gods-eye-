@@ -8,3 +8,10 @@ def status():
         "app": "God's Eye",
         "status": "active"
     }
+
+@router.get("/chat")
+def chat(message: str):
+    return {
+        "user": message,
+        "response": f"You said: {message}"
+    }
