@@ -23,3 +23,9 @@ def remember(note: str):
         "saved": note,
         "total_memories": len(memory)
     }
+
+@router.get("/memories")
+def get_memories():
+    return {
+        "memories": memory
+    }
