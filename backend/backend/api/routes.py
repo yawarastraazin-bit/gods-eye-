@@ -16,6 +16,19 @@ def chat(message: str):
     }
 
 memory = []
+journal = []
+@router.post("/journal")
+def add_journal(entry: str):
+    journal.append(entry)
+    return {
+        "saved": entry
+    }
+
+@router.get("/journal")
+def get_journal():
+    return {
+        "entries": journal
+    }
 @router.post("/remember")
 def remember(note: str):
     memory.append(note)
