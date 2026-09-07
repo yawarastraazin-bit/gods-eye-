@@ -29,3 +29,10 @@ def get_memories():
     return {
         "memories": memory
     }
+
+@router.delete("/memories")
+def clear_memories():
+    memory.clear()
+    return {
+        "message": "All memories deleted"
+    }
