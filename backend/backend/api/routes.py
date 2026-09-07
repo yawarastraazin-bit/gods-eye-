@@ -4,8 +4,13 @@ router = APIRouter()
 
 @router.get("/status")
 def status():
-    return {"status": "active"}
+    return {
+        "app": "God's Eye",
+        "status": "active"
+    }
 
 @router.get("/chat")
 def chat(message: str):
-    return {"response": "You said: " + message}
+    return {
+        "reply": f"You said: {message}"
+    }
