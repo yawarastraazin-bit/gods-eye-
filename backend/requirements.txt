@@ -4,3 +4,6 @@ pydantic
 sqlalchemy
 chromadb
 python-dotenv
+openai
+sentence-transformers
+pytest
